@@ -22,6 +22,11 @@ uv run pytest -q
 These are the same checks CI runs. The tests run offline and call no model; `uv run ruff format` fixes the
 formatting. To run ruff on every commit, install the hooks once with `uvx pre-commit install`.
 
+## Pull requests
+
+`main` accepts no direct pushes. Work on a branch, open a pull request, and it is squash-merged once CI passes; CI
+runs on every update to the pull request and again on `main` after the merge.
+
 ## The repository is the plugin
 
 Claude Code and Codex install this repository as it is: `.claude-plugin/`, `.codex-plugin/` and `.agents/plugins/`
