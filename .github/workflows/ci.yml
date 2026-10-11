@@ -1,0 +1,59 @@
+name: ci
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: {python-version: "${{ matrix.python }}"}
+      - run: uv sync --all-extras
+      - run: uv run ruff format --check
+      - run: uv run ruff check
+      - run: uv run mypy
+      - run: uv run pytest -q
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: {python-version: "3.12"}
+      - run: uv sync --all-extras
+      - run: uv run ruff format --check
+      - run: uv run ruff check
+      - run: uv run mypy
+      - run: uv run pytest -q
+  packaging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - name: Smoke test the wheel outside the checkout
+        run: |
+          python -m venv "$RUNNER_TEMP/stepbook-wheel"
+          "$RUNNER_TEMP/stepbook-wheel/bin/python" -m pip install dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/stepbook-wheel/bin/stepbook" --version
+          "$RUNNER_TEMP/stepbook-wheel/bin/stepbook" --help
+          for skill in checklist eval-loop-adapter eval-loop; do
+            "$RUNNER_TEMP/stepbook-wheel/bin/stepbook" validate "$skill"
+          done
+          for module in cli executors.codex executors.opencode; do
+            "$RUNNER_TEMP/stepbook-wheel/bin/python" -m "stepbook.$module" --help
+          done
+  plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: claude plugin validate . --strict

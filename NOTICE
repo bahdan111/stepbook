@@ -1,0 +1,18 @@
+stepbook
+Copyright 2026 Bahdan Kapionkin
+
+Licensed under the Apache License, Version 2.0.
+
+An open implementation of SKILL.state for Claude Code, Codex and OpenCode, built for long-horizon agent work, based on the idea proposed in "SKILL.state: Scalable Long-Horizon Agent Skills"
+by Sanket Badhe, Priyanka Tiwari and Jonghyun Chung (arXiv:2608.26263, 2026).
+Paper source: https://arxiv.org/abs/2608.26263
+Paper license: Creative Commons Attribution 4.0 International (CC BY 4.0),
+https://creativecommons.org/licenses/by/4.0/
+The paper's authors released no code; this implementation is independent.
+Prompt wording in stepbook/runtime/rendering.py is adapted from the paper's Appendix A.
+
+The TAT-QA dataset (Zhu et al., ACL 2021) is redistributed in demo/tatqa/cases*.json.
+These cases were selected and reformatted from the source dataset.
+Dataset source: https://github.com/NExTplusplus/TAT-QA
+Dataset license: Creative Commons Attribution 4.0 International (CC BY 4.0),
+https://creativecommons.org/licenses/by/4.0/

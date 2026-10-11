@@ -1,0 +1,32 @@
+{
+  "goal": "Improve the system by investigating evaluation evidence, proposing experiments, and measuring reversible changes.",
+  "target": {
+    "metric": "primary"
+  },
+  "protocol": {
+    "runs_per_hypothesis": 2,
+    "keep_runs": 6,
+    "max_runs": null,
+    "baseline_runs": 3,
+    "noise_band": 0.04
+  },
+  "baseline_metrics": {},
+  "kept_stack": [],
+  "hypotheses": {},
+  "runs": {},
+  "current": {
+    "h": null,
+    "phase": "run",
+    "run_index": 0
+  },
+  "budget": {
+    "runs_used": 0,
+    "runs_max": null
+  },
+  "lessons": {},
+  "user_requirements": [],
+  "notes": {},
+  "protocol_observed": {},
+  "reference_metrics": {},
+  "investigations": {}
+}

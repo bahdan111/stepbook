@@ -1,0 +1,18 @@
+{
+  "name": "stepbook",
+  "description": "Run long-horizon procedural skills (eval-improvement loops, fix-all sweeps) with an explicit validated state instead of a growing transcript. Steer a running loop from this session; state survives compaction.",
+  "author": {
+    "name": "Bahdan Kapionkin"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/bahdan111/stepbook",
+  "repository": "https://github.com/bahdan111/stepbook",
+  "keywords": [
+    "agents",
+    "long-horizon",
+    "state",
+    "evaluation",
+    "stepbook"
+  ],
+  "version": "0.1.0"
+}

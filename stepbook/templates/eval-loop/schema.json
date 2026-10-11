@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "goal": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "facts": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "protocol": {
+      "type": "object",
+      "properties": {
+        "baseline_runs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "runs_per_hypothesis": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "noise_cases": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "baseline_runs",
+        "runs_per_hypothesis",
+        "noise_cases"
+      ],
+      "additionalProperties": false
+    },
+    "baseline": {
+      "type": "object",
+      "properties": {
+        "runs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_mean": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "runs"
+      ],
+      "additionalProperties": false
+    },
+    "hypotheses": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "how": {
+            "type": "string"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "user",
+              "docs",
+              "agent"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "todo",
+              "investigating",
+              "testing",
+              "kept",
+              "reverted",
+              "inconclusive",
+              "skipped"
+            ]
+          },
+          "runs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "commit": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "rationale",
+          "origin",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "runs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "stack": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "primary": {
+            "type": "number"
+          },
+          "metrics": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "valid": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "case_set": {
+            "type": "string"
+          },
+          "artifact": {
+            "type": "string"
+          },
+          "outcomes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ]
+            }
+          }
+        },
+        "required": [
+          "label",
+          "stack",
+          "valid",
+          "notes",
+          "case_set",
+          "artifact"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "kept_stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "runs_used": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "runs_max": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "runs_used",
+        "runs_max"
+      ],
+      "additionalProperties": false
+    },
+    "current": {
+      "type": "object",
+      "properties": {
+        "phase": {
+          "type": "string"
+        },
+        "h": {
+          "type": "string"
+        },
+        "run": {
+          "type": "string"
+        },
+        "reference_runs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "starting_commit": {
+          "type": "string"
+        },
+        "changed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pending": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "phase"
+      ],
+      "additionalProperties": false
+    },
+    "blockers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "lessons": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "user_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "done": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "text",
+          "done"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "goal",
+    "constraints",
+    "facts",
+    "protocol",
+    "baseline",
+    "hypotheses",
+    "runs",
+    "kept_stack",
+    "budget",
+    "current",
+    "blockers",
+    "lessons",
+    "notes",
+    "user_requirements"
+  ],
+  "additionalProperties": true,
+  "x-stepbook": {
+    "protected": [
+      "goal",
+      "user_requirements",
+      "budget.runs_max"
+    ]
+  }
+}

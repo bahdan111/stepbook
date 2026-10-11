@@ -1,0 +1,90 @@
+[project]
+name = "stepbook"
+version = "0.1.0"
+description = "stepbook: a harness for long-horizon agent tasks that keeps validated state instead of a growing transcript (based on SKILL.state: Scalable Long-Horizon Agent Skills, arXiv:2608.26263)."
+dynamic = ["readme"]
+requires-python = ">=3.11"
+authors = [{ name = "Bahdan Kapionkin" }]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+keywords = ["agents", "skills", "state", "workflows", "validation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["jsonschema>=4.20", "pydantic>=2"]
+
+[project.urls]
+Homepage = "https://github.com/bahdan111/stepbook"
+Source = "https://github.com/bahdan111/stepbook"
+Issues = "https://github.com/bahdan111/stepbook/issues"
+
+[project.optional-dependencies]
+demo = ["rank-bm25>=0.2"]
+documents = ["pypdf>=5", "openpyxl>=3.1"]
+
+# Development tools (PEP 735): `uv sync` installs the `dev` group by default.
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.16", "mypy>=1.10", "hatchling>=1.27.0", "hatch-fancy-pypi-readme>=24"]
+
+[project.scripts]
+stepbook = "stepbook.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.27.0", "hatch-fancy-pypi-readme>=24"]
+build-backend = "hatchling.build"
+
+# The PyPI page shows README.md with its pictures pointed at GitHub, since PyPI cannot serve docs/assets/.
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
+path = "README.md"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
+pattern = '(src|srcset)="(docs/assets/[^"]+)"'
+replacement = '\1="https://raw.githubusercontent.com/bahdan111/stepbook/main/\2"'
+
+[tool.hatch.build.targets.wheel]
+packages = ["stepbook"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"stepbook/templates/eval-loop-adapter/SKILL.md" = "stepbook/templates/eval-loop-adapter/SKILL.md"
+"stepbook/templates/checklist/SKILL.md" = "stepbook/templates/checklist/SKILL.md"
+"stepbook/templates/eval-loop/SKILL.md" = "stepbook/templates/eval-loop/SKILL.md"
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+include = ["/stepbook", "/skills/stepbook", "/.claude-plugin", "/.codex-plugin", "/.agents/plugins", "/hooks", "/tests", "/docs/assets", "/docs/examples", "/scripts", "/LICENSE", "/NOTICE", "/README.md", "/pyproject.toml"]
+exclude = ["/dist", "/bench", "/.stepbook", "**/__pycache__", "**/*.py[cod]", "**/.pytest_cache", "**/.ruff_cache", "**/.mypy_cache"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+include = ["stepbook/**/*.py", "hooks/**/*.py", "scripts/**/*.py", "tests/**/*.py"]
+extend-exclude = ["dist", ".venv", ".claude"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+# E501: the long lines are string-literal contracts (refusal texts, prompts, journal keys); wrapping them would change bytes that tests and goldens pin.
+ignore = ["E501"]
+
+[tool.mypy]
+# CI requires zero type-checking errors.
+files = ["stepbook", "hooks"]
+python_version = "3.12"
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+show_error_codes = true
+pretty = false

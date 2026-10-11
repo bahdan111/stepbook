@@ -1,0 +1,602 @@
+[
+ {
+  "file": "pkg/m00.py",
+  "search": "x * 7",
+  "replace": "x + 7",
+  "test": "tests/test_m00.py::test_scale_0"
+ },
+ {
+  "file": "pkg/m00.py",
+  "search": "x > 13",
+  "replace": "x >= 13",
+  "test": "tests/test_m00.py::test_above_1"
+ },
+ {
+  "file": "pkg/m00.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m00.py::test_join_2"
+ },
+ {
+  "file": "pkg/m00.py",
+  "search": "min(15, x)",
+  "replace": "min(16, x)",
+  "test": "tests/test_m00.py::test_clip_3"
+ },
+ {
+  "file": "pkg/m00.py",
+  "search": "range(len(xs) - 6 + 1)",
+  "replace": "range(len(xs) - 6)",
+  "test": "tests/test_m00.py::test_window_4"
+ },
+ {
+  "file": "pkg/m01.py",
+  "search": "x * 6",
+  "replace": "x * 7",
+  "test": "tests/test_m01.py::test_scale_10"
+ },
+ {
+  "file": "pkg/m01.py",
+  "search": "x > 8",
+  "replace": "x > 9",
+  "test": "tests/test_m01.py::test_above_11"
+ },
+ {
+  "file": "pkg/m01.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m01.py::test_join_12"
+ },
+ {
+  "file": "pkg/m01.py",
+  "search": "max(-3, min(32, x))",
+  "replace": "min(-3, max(32, x))",
+  "test": "tests/test_m01.py::test_clip_13"
+ },
+ {
+  "file": "pkg/m01.py",
+  "search": "xs[j:j + 6]",
+  "replace": "xs[j:j + 5]",
+  "test": "tests/test_m01.py::test_window_14"
+ },
+ {
+  "file": "pkg/m02.py",
+  "search": "x * 9",
+  "replace": "x + 9",
+  "test": "tests/test_m02.py::test_scale_20"
+ },
+ {
+  "file": "pkg/m02.py",
+  "search": "x > 11",
+  "replace": "x > 12",
+  "test": "tests/test_m02.py::test_above_21"
+ },
+ {
+  "file": "pkg/m02.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m02.py::test_join_22"
+ },
+ {
+  "file": "pkg/m02.py",
+  "search": "max(-2, min(36, x))",
+  "replace": "min(-2, max(36, x))",
+  "test": "tests/test_m02.py::test_clip_23"
+ },
+ {
+  "file": "pkg/m02.py",
+  "search": "xs[j:j + 5]",
+  "replace": "xs[j:j + 4]",
+  "test": "tests/test_m02.py::test_window_24"
+ },
+ {
+  "file": "pkg/m03.py",
+  "search": "x * 6",
+  "replace": "x * 7",
+  "test": "tests/test_m03.py::test_scale_30"
+ },
+ {
+  "file": "pkg/m03.py",
+  "search": "x > 5",
+  "replace": "x >= 5",
+  "test": "tests/test_m03.py::test_above_31"
+ },
+ {
+  "file": "pkg/m03.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m03.py::test_join_32"
+ },
+ {
+  "file": "pkg/m03.py",
+  "search": "max(-5, min(24, x))",
+  "replace": "min(-5, max(24, x))",
+  "test": "tests/test_m03.py::test_clip_33"
+ },
+ {
+  "file": "pkg/m03.py",
+  "search": "range(len(xs) - 9 + 1)",
+  "replace": "range(len(xs) - 9)",
+  "test": "tests/test_m03.py::test_window_34"
+ },
+ {
+  "file": "pkg/m04.py",
+  "search": "x * 9",
+  "replace": "x + 9",
+  "test": "tests/test_m04.py::test_scale_40"
+ },
+ {
+  "file": "pkg/m04.py",
+  "search": "x > 40",
+  "replace": "x > 41",
+  "test": "tests/test_m04.py::test_above_41"
+ },
+ {
+  "file": "pkg/m04.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m04.py::test_join_42"
+ },
+ {
+  "file": "pkg/m04.py",
+  "search": "min(28, x)",
+  "replace": "min(29, x)",
+  "test": "tests/test_m04.py::test_clip_43"
+ },
+ {
+  "file": "pkg/m04.py",
+  "search": "xs[j:j + 7]",
+  "replace": "xs[j:j + 6]",
+  "test": "tests/test_m04.py::test_window_44"
+ },
+ {
+  "file": "pkg/m05.py",
+  "search": "x * 4",
+  "replace": "x + 4",
+  "test": "tests/test_m05.py::test_scale_50"
+ },
+ {
+  "file": "pkg/m05.py",
+  "search": "x > 23",
+  "replace": "x >= 23",
+  "test": "tests/test_m05.py::test_above_51"
+ },
+ {
+  "file": "pkg/m05.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m05.py::test_join_52"
+ },
+ {
+  "file": "pkg/m05.py",
+  "search": "min(39, x)",
+  "replace": "min(40, x)",
+  "test": "tests/test_m05.py::test_clip_53"
+ },
+ {
+  "file": "pkg/m05.py",
+  "search": "xs[j:j + 6]",
+  "replace": "xs[j:j + 5]",
+  "test": "tests/test_m05.py::test_window_54"
+ },
+ {
+  "file": "pkg/m06.py",
+  "search": "x * 3",
+  "replace": "x * 4",
+  "test": "tests/test_m06.py::test_scale_60"
+ },
+ {
+  "file": "pkg/m06.py",
+  "search": "x > 39",
+  "replace": "x >= 39",
+  "test": "tests/test_m06.py::test_above_61"
+ },
+ {
+  "file": "pkg/m06.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m06.py::test_join_62"
+ },
+ {
+  "file": "pkg/m06.py",
+  "search": "min(33, x)",
+  "replace": "min(34, x)",
+  "test": "tests/test_m06.py::test_clip_63"
+ },
+ {
+  "file": "pkg/m06.py",
+  "search": "xs[j:j + 5]",
+  "replace": "xs[j:j + 4]",
+  "test": "tests/test_m06.py::test_window_64"
+ },
+ {
+  "file": "pkg/m07.py",
+  "search": "x * 3",
+  "replace": "x * 4",
+  "test": "tests/test_m07.py::test_scale_70"
+ },
+ {
+  "file": "pkg/m07.py",
+  "search": "x > 25",
+  "replace": "x >= 25",
+  "test": "tests/test_m07.py::test_above_71"
+ },
+ {
+  "file": "pkg/m07.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m07.py::test_join_72"
+ },
+ {
+  "file": "pkg/m07.py",
+  "search": "min(40, x)",
+  "replace": "min(41, x)",
+  "test": "tests/test_m07.py::test_clip_73"
+ },
+ {
+  "file": "pkg/m07.py",
+  "search": "xs[j:j + 7]",
+  "replace": "xs[j:j + 6]",
+  "test": "tests/test_m07.py::test_window_74"
+ },
+ {
+  "file": "pkg/m08.py",
+  "search": "x * 6",
+  "replace": "x * 7",
+  "test": "tests/test_m08.py::test_scale_80"
+ },
+ {
+  "file": "pkg/m08.py",
+  "search": "x > 32",
+  "replace": "x > 33",
+  "test": "tests/test_m08.py::test_above_81"
+ },
+ {
+  "file": "pkg/m08.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m08.py::test_join_82"
+ },
+ {
+  "file": "pkg/m08.py",
+  "search": "min(30, x)",
+  "replace": "min(31, x)",
+  "test": "tests/test_m08.py::test_clip_83"
+ },
+ {
+  "file": "pkg/m08.py",
+  "search": "range(len(xs) - 9 + 1)",
+  "replace": "range(len(xs) - 9)",
+  "test": "tests/test_m08.py::test_window_84"
+ },
+ {
+  "file": "pkg/m09.py",
+  "search": "x * 3",
+  "replace": "x * 4",
+  "test": "tests/test_m09.py::test_scale_90"
+ },
+ {
+  "file": "pkg/m09.py",
+  "search": "x > 25",
+  "replace": "x > 26",
+  "test": "tests/test_m09.py::test_above_91"
+ },
+ {
+  "file": "pkg/m09.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m09.py::test_join_92"
+ },
+ {
+  "file": "pkg/m09.py",
+  "search": "max(3, min(38, x))",
+  "replace": "min(3, max(38, x))",
+  "test": "tests/test_m09.py::test_clip_93"
+ },
+ {
+  "file": "pkg/m09.py",
+  "search": "range(len(xs) - 4 + 1)",
+  "replace": "range(len(xs) - 4)",
+  "test": "tests/test_m09.py::test_window_94"
+ },
+ {
+  "file": "pkg/m10.py",
+  "search": "x * 5",
+  "replace": "x + 5",
+  "test": "tests/test_m10.py::test_scale_100"
+ },
+ {
+  "file": "pkg/m10.py",
+  "search": "x > 6",
+  "replace": "x >= 6",
+  "test": "tests/test_m10.py::test_above_101"
+ },
+ {
+  "file": "pkg/m10.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m10.py::test_join_102"
+ },
+ {
+  "file": "pkg/m10.py",
+  "search": "max(3, min(18, x))",
+  "replace": "min(3, max(18, x))",
+  "test": "tests/test_m10.py::test_clip_103"
+ },
+ {
+  "file": "pkg/m10.py",
+  "search": "xs[j:j + 9]",
+  "replace": "xs[j:j + 8]",
+  "test": "tests/test_m10.py::test_window_104"
+ },
+ {
+  "file": "pkg/m11.py",
+  "search": "x * 6",
+  "replace": "x * 7",
+  "test": "tests/test_m11.py::test_scale_110"
+ },
+ {
+  "file": "pkg/m11.py",
+  "search": "x > 7",
+  "replace": "x >= 7",
+  "test": "tests/test_m11.py::test_above_111"
+ },
+ {
+  "file": "pkg/m11.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m11.py::test_join_112"
+ },
+ {
+  "file": "pkg/m11.py",
+  "search": "max(4, min(31, x))",
+  "replace": "min(4, max(31, x))",
+  "test": "tests/test_m11.py::test_clip_113"
+ },
+ {
+  "file": "pkg/m11.py",
+  "search": "range(len(xs) - 3 + 1)",
+  "replace": "range(len(xs) - 3)",
+  "test": "tests/test_m11.py::test_window_114"
+ },
+ {
+  "file": "pkg/m12.py",
+  "search": "x * 3",
+  "replace": "x * 4",
+  "test": "tests/test_m12.py::test_scale_120"
+ },
+ {
+  "file": "pkg/m12.py",
+  "search": "x > 25",
+  "replace": "x > 26",
+  "test": "tests/test_m12.py::test_above_121"
+ },
+ {
+  "file": "pkg/m12.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m12.py::test_join_122"
+ },
+ {
+  "file": "pkg/m12.py",
+  "search": "max(2, min(45, x))",
+  "replace": "min(2, max(45, x))",
+  "test": "tests/test_m12.py::test_clip_123"
+ },
+ {
+  "file": "pkg/m12.py",
+  "search": "xs[j:j + 9]",
+  "replace": "xs[j:j + 8]",
+  "test": "tests/test_m12.py::test_window_124"
+ },
+ {
+  "file": "pkg/m13.py",
+  "search": "x * 9",
+  "replace": "x * 10",
+  "test": "tests/test_m13.py::test_scale_130"
+ },
+ {
+  "file": "pkg/m13.py",
+  "search": "x > 18",
+  "replace": "x >= 18",
+  "test": "tests/test_m13.py::test_above_131"
+ },
+ {
+  "file": "pkg/m13.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m13.py::test_join_132"
+ },
+ {
+  "file": "pkg/m13.py",
+  "search": "max(-5, min(32, x))",
+  "replace": "min(-5, max(32, x))",
+  "test": "tests/test_m13.py::test_clip_133"
+ },
+ {
+  "file": "pkg/m13.py",
+  "search": "range(len(xs) - 7 + 1)",
+  "replace": "range(len(xs) - 7)",
+  "test": "tests/test_m13.py::test_window_134"
+ },
+ {
+  "file": "pkg/m14.py",
+  "search": "x * 8",
+  "replace": "x * 9",
+  "test": "tests/test_m14.py::test_scale_140"
+ },
+ {
+  "file": "pkg/m14.py",
+  "search": "x > 3",
+  "replace": "x >= 3",
+  "test": "tests/test_m14.py::test_above_141"
+ },
+ {
+  "file": "pkg/m14.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m14.py::test_join_142"
+ },
+ {
+  "file": "pkg/m14.py",
+  "search": "max(3, min(43, x))",
+  "replace": "min(3, max(43, x))",
+  "test": "tests/test_m14.py::test_clip_143"
+ },
+ {
+  "file": "pkg/m14.py",
+  "search": "range(len(xs) - 3 + 1)",
+  "replace": "range(len(xs) - 3)",
+  "test": "tests/test_m14.py::test_window_144"
+ },
+ {
+  "file": "pkg/m15.py",
+  "search": "x * 4",
+  "replace": "x + 4",
+  "test": "tests/test_m15.py::test_scale_150"
+ },
+ {
+  "file": "pkg/m15.py",
+  "search": "x > 36",
+  "replace": "x > 37",
+  "test": "tests/test_m15.py::test_above_151"
+ },
+ {
+  "file": "pkg/m15.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m15.py::test_join_152"
+ },
+ {
+  "file": "pkg/m15.py",
+  "search": "max(-4, min(12, x))",
+  "replace": "min(-4, max(12, x))",
+  "test": "tests/test_m15.py::test_clip_153"
+ },
+ {
+  "file": "pkg/m15.py",
+  "search": "xs[j:j + 5]",
+  "replace": "xs[j:j + 4]",
+  "test": "tests/test_m15.py::test_window_154"
+ },
+ {
+  "file": "pkg/m16.py",
+  "search": "x * 3",
+  "replace": "x + 3",
+  "test": "tests/test_m16.py::test_scale_160"
+ },
+ {
+  "file": "pkg/m16.py",
+  "search": "x > 38",
+  "replace": "x >= 38",
+  "test": "tests/test_m16.py::test_above_161"
+ },
+ {
+  "file": "pkg/m16.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m16.py::test_join_162"
+ },
+ {
+  "file": "pkg/m16.py",
+  "search": "max(-3, min(39, x))",
+  "replace": "min(-3, max(39, x))",
+  "test": "tests/test_m16.py::test_clip_163"
+ },
+ {
+  "file": "pkg/m16.py",
+  "search": "xs[j:j + 7]",
+  "replace": "xs[j:j + 6]",
+  "test": "tests/test_m16.py::test_window_164"
+ },
+ {
+  "file": "pkg/m17.py",
+  "search": "x * 2",
+  "replace": "x * 3",
+  "test": "tests/test_m17.py::test_scale_170"
+ },
+ {
+  "file": "pkg/m17.py",
+  "search": "x > 4",
+  "replace": "x > 5",
+  "test": "tests/test_m17.py::test_above_171"
+ },
+ {
+  "file": "pkg/m17.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m17.py::test_join_172"
+ },
+ {
+  "file": "pkg/m17.py",
+  "search": "max(2, min(31, x))",
+  "replace": "min(2, max(31, x))",
+  "test": "tests/test_m17.py::test_clip_173"
+ },
+ {
+  "file": "pkg/m17.py",
+  "search": "xs[j:j + 7]",
+  "replace": "xs[j:j + 6]",
+  "test": "tests/test_m17.py::test_window_174"
+ },
+ {
+  "file": "pkg/m18.py",
+  "search": "x * 4",
+  "replace": "x * 5",
+  "test": "tests/test_m18.py::test_scale_180"
+ },
+ {
+  "file": "pkg/m18.py",
+  "search": "x > 22",
+  "replace": "x >= 22",
+  "test": "tests/test_m18.py::test_above_181"
+ },
+ {
+  "file": "pkg/m18.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m18.py::test_join_182"
+ },
+ {
+  "file": "pkg/m18.py",
+  "search": "max(3, min(44, x))",
+  "replace": "min(3, max(44, x))",
+  "test": "tests/test_m18.py::test_clip_183"
+ },
+ {
+  "file": "pkg/m18.py",
+  "search": "range(len(xs) - 5 + 1)",
+  "replace": "range(len(xs) - 5)",
+  "test": "tests/test_m18.py::test_window_184"
+ },
+ {
+  "file": "pkg/m19.py",
+  "search": "x * 5",
+  "replace": "x + 5",
+  "test": "tests/test_m19.py::test_scale_190"
+ },
+ {
+  "file": "pkg/m19.py",
+  "search": "x > 21",
+  "replace": "x > 22",
+  "test": "tests/test_m19.py::test_above_191"
+ },
+ {
+  "file": "pkg/m19.py",
+  "search": "p.strip() for",
+  "replace": "p for",
+  "test": "tests/test_m19.py::test_join_192"
+ },
+ {
+  "file": "pkg/m19.py",
+  "search": "max(2, min(11, x))",
+  "replace": "min(2, max(11, x))",
+  "test": "tests/test_m19.py::test_clip_193"
+ },
+ {
+  "file": "pkg/m19.py",
+  "search": "xs[j:j + 5]",
+  "replace": "xs[j:j + 4]",
+  "test": "tests/test_m19.py::test_window_194"
+ }
+]

@@ -1,0 +1,40 @@
+{
+  "program": [
+    "stepbook"
+  ],
+  "argv": [
+    "run",
+    "skills/runbook",
+    "--env",
+    "shell",
+    "--workdir",
+    "<TMP>",
+    "--goal",
+    "Inspect sample",
+    "--no-checkpoint",
+    "--log-dir",
+    "<TMP>/log"
+  ],
+  "cwd": "<TMP>",
+  "started_at": 1700000000.0,
+  "resume_command": "stepbook run skills/runbook --env shell --workdir <TMP> --goal 'Inspect sample' --no-checkpoint --resume --log-dir <TMP>/log",
+  "resumes": [
+    {
+      "resumed_at": 1700000000.0,
+      "argv": [
+        "run",
+        "skills/runbook",
+        "--env",
+        "shell",
+        "--workdir",
+        "<TMP>",
+        "--goal",
+        "Inspect sample",
+        "--no-checkpoint",
+        "--log-dir",
+        "<TMP>/log",
+        "--resume"
+      ]
+    }
+  ]
+}

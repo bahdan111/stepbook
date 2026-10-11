@@ -1,0 +1,34 @@
+{
+  "goal": "",
+  "constraints": [],
+  "checks": {},
+  "checklist": {
+    "inspect": {
+      "text": "Inspect the sample",
+      "status": "done",
+      "evidence": "sample inspected"
+    },
+    "review": {
+      "text": "Review the evidence",
+      "status": "todo"
+    }
+  },
+  "facts": {
+    "sample": "alpha",
+    "review": "pending"
+  },
+  "blockers": {},
+  "checks_status": {
+    "ready": "pass"
+  },
+  "current": "await operator review",
+  "notes": {
+    "keep": "durable note"
+  },
+  "user_requirements": [
+    {
+      "text": "Keep the inspection evidence when updating the checklist.",
+      "done": false
+    }
+  ]
+}

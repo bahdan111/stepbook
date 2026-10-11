@@ -1,0 +1,10 @@
+{
+  "top_k": 5,
+  "table_format": "rows",
+  "include_paragraphs": false,
+  "number_boost": false,
+  "prompt_rules": "tables",
+  "gen_model": "sonnet",
+  "n_cases": 30,
+  "case_seed": 11
+}

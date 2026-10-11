@@ -1,0 +1,12 @@
+# Ruff on the staged Python files before each commit. Install once per clone: uvx pre-commit install
+# CI runs the same ruff checks on the whole tree, plus mypy and the tests.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.0
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+        files: ^(stepbook|hooks|scripts|tests)/
+      - id: ruff-format
+        files: ^(stepbook|hooks|scripts|tests)/
+        types_or: [python, pyi]  # never Markdown: skill files and goldens are pinned byte for byte

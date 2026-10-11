@@ -1,0 +1,5 @@
+# Synthetic parse-only commands; none of these paths is accessed.
+/tmp/example/.venv/bin/stepbook run /tmp/example/skills/checklist --workdir '/tmp/example/work tree' --allow-outside --unsandboxed-i-accept-the-risk --goal 'Check a toy text formatter and record the result.' --model example-model --steps 40 --state-max-chars 8000 --cmd-timeout 300 --log-dir /tmp/example/cli-resume --resume
+/tmp/example/.venv/bin/stepbook run /tmp/example/skills/checklist --workdir '/tmp/example/work tree' --allow-outside --unsandboxed-i-accept-the-risk --goal 'Check a toy text formatter and record the result.' --executor command --command '/tmp/example/.venv/bin/python /tmp/example/agent.py step --model example-model --schema {schema_file} --cwd "/tmp/example/work tree"' --model example-model --steps 40 --state-max-chars 8000 --cmd-timeout 300 --log-dir /tmp/example/command-resume --resume
+# INCOMPLETE SYNTHETIC COMMAND: parses but lacks --goal and --resume.
+/tmp/example/.venv/bin/stepbook run checklist --workdir /tmp/example/incomplete

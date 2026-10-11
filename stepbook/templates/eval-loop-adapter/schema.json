@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "goal": {
+      "type": "string"
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "metric": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "protocol": {
+      "type": "object",
+      "properties": {
+        "runs_per_hypothesis": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "noise_band": {
+          "type": "number"
+        },
+        "keep_runs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_runs": {
+          "type": ["integer", "null"]
+        },
+        "baseline_runs": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "baseline_metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "kept_stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hypotheses": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "Experiment category, such as config, prompt, code, data preparation, or another adapter-supported change."
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "todo",
+              "testing",
+              "kept",
+              "reverted",
+              "inconclusive",
+              "skipped"
+            ]
+          },
+          "runs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "origin": {
+            "type": "string"
+          },
+          "applied_as": {
+            "type": "string"
+          },
+          "cost_per_case": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "kind",
+          "status"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "runs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "h": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "primary": {
+            "type": "number"
+          },
+          "det": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "fixed": {
+            "type": "integer"
+          },
+          "broke": {
+            "type": "integer"
+          },
+          "cost_tokens": {
+            "type": "number"
+          },
+          "duration_s": {
+            "type": "number"
+          },
+          "cost_per_case": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "current": {
+      "type": "object",
+      "properties": {
+        "h": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "research",
+            "select",
+            "apply",
+            "run",
+            "decide",
+            "done"
+          ]
+        },
+        "run_index": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "phase"
+      ],
+      "additionalProperties": false
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "runs_used": {
+          "type": "integer"
+        },
+        "runs_max": {
+          "type": ["integer", "null"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "lessons": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "user_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "done": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "protocol_observed": {
+      "type": "object",
+      "properties": {
+        "noise_band": {
+          "type": "number"
+        },
+        "baseline_sd": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reference_metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "investigations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "short investigation index: finding id or hypothesis id -> summary and next action; full evidence lives in the research store"
+    }
+  },
+  "required": [
+    "goal",
+    "protocol",
+    "hypotheses",
+    "current",
+    "budget"
+  ],
+  "additionalProperties": true,
+  "x-stepbook": {
+    "protected": [
+      "goal",
+      "protocol",
+      "user_requirements",
+      "budget.runs_max"
+    ],
+    "max_deletions": 6,
+    "write_once": [
+      "baseline_metrics"
+    ]
+  }
+}

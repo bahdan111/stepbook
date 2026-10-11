@@ -1,0 +1,266 @@
+[
+ {
+  "uid": "0e22cef8-0342-4085-b5ad-a9ea512a8b3f",
+  "question": "What was the average Interest expense?",
+  "answer": 1033.5,
+  "answer_type": "arithmetic",
+  "scale": "million",
+  "gold_uid": "3eee9fc1-882b-4146-8c58-55a1e687a5d5"
+ },
+ {
+  "uid": "e2419503-003d-4893-947b-72c8161ec572",
+  "question": "What is the average amount of revenues for 2018 and 2019?",
+  "answer": 67669,
+  "answer_type": "arithmetic",
+  "scale": "thousand",
+  "gold_uid": "d4f5a342-4efd-42fd-aa11-7e762d1e3f8f"
+ },
+ {
+  "uid": "de3e8b87-a5cd-42e9-9fd1-ea0e1381412e",
+  "question": "What was the change in the amount of Raw Materials between 2018 and 2019?",
+  "answer": -2383,
+  "answer_type": "arithmetic",
+  "scale": "thousand",
+  "gold_uid": "d7a538e8-655c-4a25-96a1-cff8b7c1b039"
+ },
+ {
+  "uid": "1504af2b-2364-4a59-8883-634a4ef67a34",
+  "question": "What was the average orders for 2019 and 2018?",
+  "answer": 12312,
+  "answer_type": "arithmetic",
+  "scale": "million",
+  "gold_uid": "5677fbce-7bb4-4f39-be85-a9ce618698c6"
+ },
+ {
+  "uid": "73618a72-ca8a-43f4-b384-409aec6bbb75",
+  "question": "What was the percentage change in deferred revenue in 2019 from 2018?",
+  "answer": -20,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "2bc7fad1-056b-4298-bfca-5a33c970b1a0"
+ },
+ {
+  "uid": "81c99a9e-786b-4ab6-94ed-e3149d697347",
+  "question": "What is the percentage difference of total liabilities when comparing after adjustment to before adjustment?",
+  "answer": 5.48,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "0a75d1da-9beb-4a61-b2f4-06cff98b755e"
+ },
+ {
+  "uid": "3258cedc-30b4-4048-bf67-9aa0b487e1b3",
+  "question": "What is the average Lease related expenses for the year ended December 31, 2019 to 2018?",
+  "answer": 1454.5,
+  "answer_type": "arithmetic",
+  "scale": "thousand",
+  "gold_uid": "8dcb30f6-a302-4704-b665-a82ee828a3d6"
+ },
+ {
+  "uid": "9f7000b0-e7b7-48b2-bcc6-8f77209894f2",
+  "question": "What is the current ratio in 2019?",
+  "answer": 0.78,
+  "answer_type": "arithmetic",
+  "scale": "",
+  "gold_uid": "93f11a3d-ce9f-4b07-8d9e-0b876b2cbc30"
+ },
+ {
+  "uid": "6a94f765-2c5a-4486-ba06-0057636740e0",
+  "question": "What is the change in Income before Income Taxes from Fiscal Year Ended April 28, 2018 to Fiscal Year Ended April 27, 2019?",
+  "answer": -20.2,
+  "answer_type": "arithmetic",
+  "scale": "million",
+  "gold_uid": "ed99123e-63a3-4238-addd-9c692afe3a05"
+ },
+ {
+  "uid": "7cf448eb-d749-4571-b12e-64beb80af423",
+  "question": "What was the percentage change in Net deferred tax assets after accounting for liabilities between 2018 and 2019?",
+  "answer": -20.08,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "9afaa852-4103-4782-9109-34104931dbc1"
+ },
+ {
+  "uid": "8698402e-4736-492e-95e5-d702ab62d662",
+  "question": " What was the percentage change in total fair value of the derivative liabilities from 2018 to 2019?",
+  "answer": 312.93,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "03ef04b2-1710-4176-81b9-350134a9b49f"
+ },
+ {
+  "uid": "24395900-adc1-4c9d-8ce9-bd21c5a54808",
+  "question": "What was the percentage change in Net income attributable to American Tower Corporation stockholders between 2018 and 2019?",
+  "answer": 52.69,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "cca95e4f-c7f7-4ded-92e0-3371290f1374"
+ },
+ {
+  "uid": "e6655bf9-a024-476a-b3dc-4aaf6ae67ba0",
+  "question": "What is the percentage change in audit-related fees in 2019?",
+  "answer": 43.81,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "a65ebf76-856b-4336-850b-f5c619115783"
+ },
+ {
+  "uid": "a44daafc-5a51-4eab-94df-2490c42a2161",
+  "question": "What is the percentage change in the fair value for real estate in 2019?",
+  "answer": 25.07,
+  "answer_type": "arithmetic",
+  "scale": "percent",
+  "gold_uid": "63a1e75f-72a5-4638-a3e2-51f881708f37"
+ },
+ {
+  "uid": "cd3367c7-d3bd-440c-8c51-90a6ee95cc77",
+  "question": "What is the increase/ (decrease) in Research and development funding from 2017 to 2019?",
+  "answer": 67,
+  "answer_type": "arithmetic",
+  "scale": "million",
+  "gold_uid": "2cf767c9-a0f8-4d78-b6f2-71221f566c2f"
+ },
+ {
+  "uid": "4329047a-2278-4f19-8d8f-ee897332d3a2",
+  "question": "What was the expected loss rate for current receivables?",
+  "answer": [
+   "1"
+  ],
+  "answer_type": "span",
+  "scale": "percent",
+  "gold_uid": "736f65a8-7b6b-47bc-8c6a-3a2d641695bc"
+ },
+ {
+  "uid": "df840c74-8dee-49db-b038-cb399494f9a5",
+  "question": "What is the 2019 taxation recoverable falling due within one year ?",
+  "answer": [
+   "233"
+  ],
+  "answer_type": "span",
+  "scale": "million",
+  "gold_uid": "1cacb8a3-8587-4ff4-aadb-814352f5c0ff"
+ },
+ {
+  "uid": "da78a862-718e-4270-b857-2c974897ae8c",
+  "question": "What was the Total EMEA amount in 2018?",
+  "answer": [
+   "294,954"
+  ],
+  "answer_type": "span",
+  "scale": "thousand",
+  "gold_uid": "68bafc82-b795-4c7b-9506-e901223c3526"
+ },
+ {
+  "uid": "497f60e5-abd2-46a8-8753-f221d3ae86bb",
+  "question": "What was the sales of loans in 2017?",
+  "answer": [
+   "72,071"
+  ],
+  "answer_type": "span",
+  "scale": "thousand",
+  "gold_uid": "708fa58a-083d-4a97-80a1-5fe9de71a36b"
+ },
+ {
+  "uid": "d0ed80ce-7ced-4c7f-88f6-2ea50d1b18e6",
+  "question": "Which years did Non-current deferred tax assets exceed $20,000 thousand?",
+  "answer": [
+   "2018"
+  ],
+  "answer_type": "span",
+  "scale": "",
+  "gold_uid": "e8a14965-257d-4945-9f13-d0e2e84d9ff8"
+ },
+ {
+  "uid": "1148519a-e611-4859-8ebd-d87eed5ed048",
+  "question": "How many years did the Income tax benefit exceed $1,500 thousand?",
+  "answer": "1",
+  "answer_type": "count",
+  "scale": "",
+  "gold_uid": "b24ee687-2712-4f16-9bc9-0f3f3636e407"
+ },
+ {
+  "uid": "d5911998-2a85-4e25-bb92-fd5440facee6",
+  "question": "What was the Net operating loss carryforwards in 2019?",
+  "answer": [
+   "$65,477"
+  ],
+  "answer_type": "span",
+  "scale": "thousand",
+  "gold_uid": "704b5994-6fee-43b2-a9c9-e5676eac92a1"
+ },
+ {
+  "uid": "b326ee9d-156e-411e-bfce-77f7f6350c5b",
+  "question": "What is the discount rate for 2019?",
+  "answer": [
+   "2.5%"
+  ],
+  "answer_type": "span",
+  "scale": "",
+  "gold_uid": "0fe00fcf-5d01-45b8-be3b-cc7faa0ddf08"
+ },
+ {
+  "uid": "6407b020-fadc-42bd-8f02-9b80f3ccb742",
+  "question": "What was the Deferred income tax assets without the adoption of ASC 606?",
+  "answer": [
+   "22,094"
+  ],
+  "answer_type": "span",
+  "scale": "thousand",
+  "gold_uid": "386352cf-f7e3-4148-920c-63bc57cf156b"
+ },
+ {
+  "uid": "21273aa1-d155-4d2e-8214-37e8261a2571",
+  "question": "What is the 2018 IAS 39 opening balance of financial liabilities?",
+  "answer": [
+   "2,154"
+  ],
+  "answer_type": "span",
+  "scale": "million",
+  "gold_uid": "21a432eb-166c-4178-adf9-08b6ad3fde7d"
+ },
+ {
+  "uid": "0af55b55-ed9c-4132-89bb-49caa66e781e",
+  "question": "What is the percentage change in CMS Adjusted EBITDA in 2019?",
+  "answer": [
+   "31%"
+  ],
+  "answer_type": "span",
+  "scale": "",
+  "gold_uid": "a5fb7f90-4f37-460a-886e-13195f501f1b"
+ },
+ {
+  "uid": "1f781a60-f0df-4a3a-861c-71b8eaaf379c",
+  "question": "In 2018, how many quarters had stock prices lower than $2.00 during their lows?",
+  "answer": "1",
+  "answer_type": "count",
+  "scale": "",
+  "gold_uid": "b4fefe60-e68c-4ba3-a8f9-35395b7ea0a5"
+ },
+ {
+  "uid": "9770e1f0-acf1-4839-8cbd-5a8901033cc8",
+  "question": "What was the accrued expenses in 2019?",
+  "answer": [
+   "81,731"
+  ],
+  "answer_type": "span",
+  "scale": "thousand",
+  "gold_uid": "9afaa852-4103-4782-9109-34104931dbc1"
+ },
+ {
+  "uid": "9e3c7e60-2851-455f-835d-7ba3e276ffc2",
+  "question": "How many years did Gross deferred tax assets exceed $400 million?",
+  "answer": "1",
+  "answer_type": "count",
+  "scale": "",
+  "gold_uid": "008149bc-f997-49d9-a981-f01f19579451"
+ },
+ {
+  "uid": "ec360d0b-1c10-4889-b8a6-a5a2e57e6810",
+  "question": "In which year was the average life expectancy for a male member aged 65 higher?",
+  "answer": [
+   "2018"
+  ],
+  "answer_type": "span",
+  "scale": "",
+  "gold_uid": "37fc1d68-ab05-4913-8fe6-4cbaafdc39cf"
+ }
+]

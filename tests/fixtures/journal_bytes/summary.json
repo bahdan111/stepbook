@@ -1,0 +1,22 @@
+{
+  "runtime": "stepbook",
+  "steps": 2,
+  "llm_calls": 2,
+  "rejected_patches": 0,
+  "score": 1.0,
+  "avg_prompt_tokens": 274.5,
+  "max_prompt_tokens": 297,
+  "total_tokens": 567,
+  "cost_usd": 0,
+  "cost_complete": true,
+  "wall_s": 0.0,
+  "aborted": false,
+  "assisted_steps": 0,
+  "first_attempt_score": null,
+  "rendered_prompt_tokens_est": [
+    281,
+    331
+  ],
+  "rendered_prompt_tokens_est_total": 611,
+  "model_ids": []
+}

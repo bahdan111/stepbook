@@ -1,0 +1,47 @@
+# Example: run a stepbook checklist unattended in CI (nightly), on a disposable checkout, and upload the run.
+# Untested in a live workflow; adapt paths, checks and the model. Requires an ANTHROPIC_API_KEY secret
+# (Claude Code headless authenticates with it) and Node for the Claude Code CLI.
+name: nightly-checklist
+on:
+  workflow_dispatch:
+    inputs:
+      goal: {description: "What to accomplish", required: true, default: "Fix every failing test without editing tests"}
+  # schedule:
+  #   - cron: "0 2 * * *"
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions: {contents: write, pull-requests: write}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/setup-node@v4
+        with: {node-version: "20"}
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: pip install "stepbook @ git+https://github.com/bahdan111/stepbook@main" && pip install -e .
+      - name: run the checklist on a branch
+        id: checklist
+        env:
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+          # stepbook refuses API-key billing by default; CI has no subscription login, so opt out here.
+          STEPBOOK_ALLOW_API_BILLING: "1"
+          # A hosted runner is a disposable VM.
+          STEPBOOK_SANDBOX: "1"
+        run: |
+          stepbook run stepbook/templates/checklist --env shell --workdir . \
+            --goal "${{ inputs.goal }}" \
+            --check "tests=python -m pytest -q" \
+            --constraint "do not edit tests" --steps 60 --log-dir .stepbook/ci-run --quiet
+      - name: open a pull request with the checkpoint branch
+        if: success() && steps.checklist.outcome == 'success'
+        run: |
+          BR=$(git branch --show-current)
+          git push -u origin "$BR"
+          gh pr create --fill --head "$BR" --body "Automated stepbook checklist. Report: see artifact."
+        env: {GH_TOKEN: "${{ github.token }}"}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: stepbook-run, path: .stepbook/ci-run}

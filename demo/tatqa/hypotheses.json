@@ -1,0 +1,8 @@
+{
+  "h1": {"kind": "config", "rationale": "retrieve 5 contexts instead of 3", "set": {"top_k": 5}},
+  "h2": {"kind": "config", "rationale": "flatten tables as 'row header | column header: value' cells instead of raw rows", "set": {"table_format": "cells"}},
+  "h3": {"kind": "prompt", "rationale": "add table-reading rules to the generation prompt (check row and column labels, units, scale)", "set": {"prompt_rules": "tables"}},
+  "h4": {"kind": "config", "rationale": "boost BM25 matches on numbers in the query", "set": {"number_boost": true}},
+  "h5": {"kind": "config", "rationale": "drop paragraphs from the index, tables only", "set": {"include_paragraphs": false}},
+  "h6": {"kind": "config", "rationale": "retrieve only 1 context to cut prompt size", "set": {"top_k": 1}}
+}

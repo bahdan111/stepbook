@@ -1,0 +1,166 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "description": "The exact command to execute.",
+      "type": "string"
+    },
+    "reasoning": {
+      "description": "Give a concise decision summary: the relevant evidence, chosen next action and any uncertainty. Do not repeat the full investigation or previous observations. Preserve evidence needed later in durable findings or notes; brevity must not remove required evidence or checks.",
+      "type": "string"
+    },
+    "state_patch": {
+      "additionalProperties": true,
+      "description": "A separate JSON object containing the merge patch, not text inside reasoning. null deletes a key.",
+      "properties": {
+        "blockers": {
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "properties": {},
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "checklist": {
+          "additionalProperties": {
+            "additionalProperties": {
+              "type": "null"
+            },
+            "properties": {
+              "done_when": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "todo",
+                  "doing",
+                  "done",
+                  "blocked",
+                  "skipped",
+                  null
+                ],
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "properties": {},
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "checks": {
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "properties": {},
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "checks_status": {
+          "additionalProperties": {
+            "enum": [
+              "pass",
+              "fail",
+              "unknown",
+              null
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "properties": {},
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "constraints": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "current": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facts": {
+          "additionalProperties": true,
+          "properties": {},
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "goal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "properties": {},
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "user_requirements": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "reasoning",
+    "state_patch",
+    "action"
+  ],
+  "type": "object"
+}

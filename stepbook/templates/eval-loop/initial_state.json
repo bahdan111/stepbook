@@ -1,0 +1,27 @@
+{
+  "goal": "Improve the measured result described by the user.",
+  "constraints": [],
+  "facts": {},
+  "protocol": {
+    "baseline_runs": 2,
+    "runs_per_hypothesis": 2,
+    "noise_cases": null
+  },
+  "baseline": {
+    "runs": []
+  },
+  "hypotheses": {},
+  "runs": {},
+  "kept_stack": [],
+  "budget": {
+    "runs_used": 0,
+    "runs_max": null
+  },
+  "current": {
+    "phase": "setup"
+  },
+  "blockers": {},
+  "lessons": {},
+  "notes": {},
+  "user_requirements": []
+}

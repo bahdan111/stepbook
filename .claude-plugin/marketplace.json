@@ -1,0 +1,16 @@
+{
+  "name": "stepbook-plugins",
+  "owner": {
+    "name": "Bahdan Kapionkin"
+  },
+  "metadata": {
+    "description": "Durable task plans, validated state and restartable runs for coding agents."
+  },
+  "plugins": [
+    {
+      "name": "stepbook",
+      "source": "./",
+      "description": "Run measured improvement loops and checklists with durable state, evidence and operator notes."
+    }
+  ]
+}
