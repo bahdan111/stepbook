@@ -1,5 +1,9 @@
 name: ci
-on: [push, pull_request]
+# Every pull request, and main after each merge; main takes no direct pushes.
+on:
+  push:
+    branches: [main]
+  pull_request:
 permissions:
   contents: read
 jobs:

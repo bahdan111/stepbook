@@ -8,4 +8,5 @@
   the run folder files (`state.json`, `events.jsonl`, `launch.json`) and the skill folder layout. Tests pin rendered
   prompts (`tests/golden/`) and journal bytes; regenerate them only for a deliberate change and say why.
 - Never decide behaviour by matching free text (model prose, tool output). Use exit codes, JSON fields or typed values.
+- Work on a branch and open a pull request; `main` accepts no direct pushes and merges only with CI green.
 - Change the version only with `scripts/bump-version.sh X.Y.Z`.
