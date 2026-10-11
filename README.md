@@ -5,6 +5,10 @@ saved state instead of the whole conversation so far. A task can run for hours, 
 resume it later or hand it to another agent. It works with Claude Code, Codex and OpenCode, on the login you already
 have.
 
+A 50-second intro film:
+
+https://github.com/user-attachments/assets/8d850b2a-8ed8-4287-91b6-6aabf2ad5b9e
+
 ## When to use it
 
 Use it for work that takes an agent dozens to hundreds of steps and ends in something you can check:
