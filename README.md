@@ -1,4 +1,4 @@
-# <picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg"><img alt="stepbook" src="docs/assets/logo.svg" width="360"></picture>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg"><img alt="stepbook" src="docs/assets/logo.svg" width="360"></picture></p>
 
 stepbook runs a long agent task as a series of short steps. Each step is a fresh agent session that reads a small
 saved state instead of the whole conversation so far. A task can run for hours, and you can pause it, send it notes,
